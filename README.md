@@ -7,21 +7,25 @@
 >sudo apt-get update  
 >sudo apt-get install libuhd-dev libuhd003 uhd-host  
 
-B210需要配置USB
+其中，B210需要配置USB
 >sudo wget -P /etc/udev/rules.d/ https://raw.githubusercontent.com/zhjc1124/gnuradio-install/main/uhd-usrp.rules  
 >sudo udevadm control --reload-rules  
 >sudo udevadm trigger  
 
-运行uhd_find_devices以检查是否安装正确
+运行uhd_find_devices以检查安装是否成功  
 
 固件下载
->uhd_images_downloader
+>uhd_images_downloader  
 
 如果提示连接错误，则需要科学上网
-或进行离线安装，手动下载所需镜像并解压至/usr/share/uhd/images目录  
+或进行离线安装，在另一台可翻墙的电脑进行手动下载所需镜像并解压至/usr/share/uhd/images目录  
+
+我这里提供b210镜像的离线下载连接，其他型号需要可通过uhd_images_downloader -l查看所有镜像下载链接  
+
 例如B210需下载[b2xx_common_fw_default-g2bdad498.zip](https://files.ettus.com/binaries/cache/usrp1/fpga-6bea23d/usrp1_b100_fw_default-g6bea23d.zip)和[b2xx_b210_fpga_default-gfde2a94e.zip](https://files.ettus.com/binaries/cache/b2xx/fpga-fde2a94eb/b2xx_b210_fpga_default-gfde2a94e.zip)  
 >wget https://raw.githubusercontent.com/zhjc1124/gnuradio-install/main/b2xx_common_fw_default-g2bdad498.zip  
 >wget https://raw.githubusercontent.com/zhjc1124/gnuradio-install/main/b2xx_b210_fpga_default-gfde2a94e.zip  
+>sudo unzip b2xx_common_fw_default-g2bdad498.zip   -d /usr/share/uhd/images  
 >sudo unzip b2xx_b210_fpga_default-gfde2a94e.zip -d /usr/share/uhd/images  
 
 那么/usr/share/uhd/images目录应该存在三个文件
