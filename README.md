@@ -3,9 +3,7 @@
 >sudo apt install gnuradio  
 
 安装UHD
->sudo add-apt-repository ppa:ettusresearch/uhd  
->sudo apt-get update  
->sudo apt-get install libuhd-dev libuhd003 uhd-host  
+>sudo apt-get install libuhd-dev libuhd003.010.003 uhd-host  
 
 其中，B210需要配置USB
 >sudo wget -P /etc/udev/rules.d/ https://raw.githubusercontent.com/zhjc1124/gnuradio-install/main/uhd-usrp.rules  
