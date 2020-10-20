@@ -1,4 +1,5 @@
 # gnuradio-install
+以下方法只安装ubuntu源自带的gnuradio3.7与uhd3.10版本，兼容性比较好。  
 安装gnuradio
 >sudo apt install gnuradio  
 
@@ -12,24 +13,15 @@
 
 运行uhd_find_devices以检查安装是否成功  
 
+
 固件下载
 >uhd_images_downloader  
 
 如果提示连接错误，则需要科学上网
-或进行离线安装，在另一台可翻墙的电脑进行手动下载所需镜像并解压至/usr/share/uhd/images目录  
-
-我这里提供b210镜像的离线下载连接，其他型号需要可通过uhd_images_downloader -l查看所有镜像下载链接  
-
-例如B210需下载[b2xx_common_fw_default-g2bdad498.zip](https://files.ettus.com/binaries/cache/usrp1/fpga-6bea23d/usrp1_b100_fw_default-g6bea23d.zip)和[b2xx_b210_fpga_default-gfde2a94e.zip](https://files.ettus.com/binaries/cache/b2xx/fpga-fde2a94eb/b2xx_b210_fpga_default-gfde2a94e.zip)  
->wget https://raw.githubusercontent.com/zhjc1124/gnuradio-install/main/b2xx_common_fw_default-g2bdad498.zip  
->wget https://raw.githubusercontent.com/zhjc1124/gnuradio-install/main/b2xx_b210_fpga_default-gfde2a94e.zip  
->sudo unzip b2xx_common_fw_default-g2bdad498.zip   -d /usr/share/uhd/images  
->sudo unzip b2xx_b210_fpga_default-gfde2a94e.zip -d /usr/share/uhd/images  
-
-那么/usr/share/uhd/images目录应该存在三个文件
->/usr/share/uhd/images/usrp_b200_fw.hex  
->/usr/share/uhd/images/usrp_b200_bl.img  
->/usr/share/uhd/images/usrp_b210_fpga.bin
+或进行离线安装  
+>wget https://mirrors.zju.edu.cn/gentoo/distfiles/d4/uhd-images_003.010.003.000-release.zip  
+>unzip uhd-images_003.010.003.000-release.zip  
+>sudo cp -r ./uhd-images_003.010.003.000-release/* /usr  
 
 固件下载完后再运行uhd_find_devices应当可以显示设备详细信息。  
 
