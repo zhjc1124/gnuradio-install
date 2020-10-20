@@ -33,4 +33,6 @@
 >/usr/share/uhd/images/usrp_b200_bl.img  
 >/usr/share/uhd/images/usrp_b210_fpga.bin
 
-固件下载完后再运行uhd_find_devices应当可以显示设备详细信息。
+固件下载完后再运行uhd_find_devices应当可以显示设备详细信息。  
+
+最后运行uhd_usrp_probe进行配置  
