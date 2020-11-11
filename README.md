@@ -33,7 +33,7 @@
 
 16.04请使用  
 >wget https://raw.githubusercontent.com/zhjc1124/gnuradio-install/main/uhd-images_003.009.002-release.zip 
->unzip uhd-images_003.009.002-release.zip
+>unzip uhd-images_003.009.002-release.zip  
 >sudo cp -r ./uhd-images_003.010.003.000-release/* /usr  
 
 固件下载完后再运行uhd_find_devices应当可以显示设备详细信息。  
