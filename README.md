@@ -1,6 +1,8 @@
 # gnuradio-install 
-仅适用于Ubuntu16.04或Ubuntu18.04
+仅适用于Ubuntu16.04或Ubuntu18.04  
 以下方法只安装ubuntu源自带的gnuradio3.7与uhd3.10以下的版本，兼容性比较好。  
+最新发现此方法只适用于B210，而ubuntu的源libuhd003会出现bug，需要从源码安装，源码安装请参考[ettus官方教程](https://kb.ettus.com/Building_and_Installing_the_USRP_Open-Source_Toolchain_(UHD_and_GNU_Radio)_on_Linux#Configuring_USB)
+
 安装gnuradio
 >sudo apt install gnuradio  
 
