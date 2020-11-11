@@ -32,7 +32,7 @@
 >sudo cp -r ./uhd-images_003.010.003.000-release/* /usr  
 
 16.04请使用  
->wget https://raw.githubusercontent.com/zhjc1124/gnuradio-install/main/uhd-images_003.009.002-release.zip 
+>wget https://raw.githubusercontent.com/zhjc1124/gnuradio-install/main/uhd-images_003.009.002-release.zip  
 >unzip uhd-images_003.009.002-release.zip  
 >sudo cp -r ./uhd-images_003.010.003.000-release/* /usr  
 
